@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "340967854669",
+    "project_id": "flowltter",
+    "storage_bucket": "flowltter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340967854669:android:cdfb3c99bf6429c0fb0204",
+        "android_client_info": {
+          "package_name": "com.didi.flowltter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340967854669-22oeba6uds7qgo48tl3utm3ikaf20m39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoJPm2dNQiG5oroCvbvxA6d69_5BXuX4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340967854669-22oeba6uds7qgo48tl3utm3ikaf20m39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
