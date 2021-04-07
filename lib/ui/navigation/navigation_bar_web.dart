@@ -9,6 +9,7 @@ class NavigationBarWeb extends StatelessWidget {
       height: 100.0,
       child: Row(
         mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           NavigationItem(title: 'Home', routeName: routeHome,),
           NavigationItem(title: 'About', routeName: routeAbout,),

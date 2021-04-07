@@ -18,7 +18,7 @@ class NavigationItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50.0),
         child: InteractiveNavItem(
-          child: Text(title, style: TextStyle(fontSize: 20.0))
+          child: Text(title, style: Theme.of(context).textTheme.headline1,)
           ,
         ),
       ),

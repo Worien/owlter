@@ -1,3 +1,4 @@
+import 'package:flowltter/ui/home/widgets/home_header_widget.dart';
 import 'package:flowltter/ui/navigation/navigation_bar_web.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,20 +11,6 @@ class HomeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(builder: (context, state) {
       return Scaffold(
-        // appBar: AppBar(
-        //   iconTheme: IconThemeData(
-        //     color: Colors.white,
-        //   ),
-        //   backgroundColor: Theme.of(context).primaryColorLight,
-        //   elevation: 5,
-        //   brightness: Brightness.dark,
-        //   centerTitle: true,
-        //   textTheme: Theme.of(context).primaryTextTheme,
-        //   actions: [],
-        //   title: Text(
-        //     "Home Page",
-        //   ),
-        // ),
         body: _buildBody(state),
       );
     });
@@ -33,6 +20,7 @@ class HomeLayout extends StatelessWidget {
     return Column(
       children: [
         NavigationBarWeb(),
+        HomeHeaderWidget(),
         Expanded(child: _buildContent(state)),
       ],
     );

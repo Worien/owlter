@@ -12,7 +12,30 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
+  ThemeData theme(BuildContext context) {
+    return ThemeData(
+      primaryColor: Color(0xFF55C5F8),
+      accentColor: Color(0xFF015596),
+      textTheme: TextTheme(
+        headline1: TextStyle(
+          color: Theme.of(context).primaryColor,
+          fontSize: 16,
+        ),
+        subtitle1: TextStyle(
+            color: Theme.of(context).accentColor,
+            fontSize: 40,
+            fontWeight: FontWeight.bold),
+        subtitle2: TextStyle(
+          color: Theme.of(context).accentColor,
+          fontSize: 20,
+        ),
+        button: TextStyle(color: Colors.white, fontSize: 16)
+      ),
+      primarySwatch: Colors.blue,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,12 +43,8 @@ class MyApp extends StatelessWidget {
       initialRoute: routeHome,
       navigatorKey: navKey,
       onGenerateRoute: RouteGenerator.generateRoute,
-      theme: ThemeData(
-
-        primarySwatch: Colors.blue,
-      ),
+      theme: theme(context),
       // home: HomePage(),
     );
   }
 }
-
