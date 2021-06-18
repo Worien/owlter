@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ArticleFiels {
+class ArticleFields {
   static final String text = "text";
   static final String title = "title";
   static final String creationDate = "creationDate";
@@ -12,15 +12,15 @@ class Article {
   DateTime creationDate;
 
   Map<String, dynamic> toJson() => {
-        ArticleFiels.text: text,
-        ArticleFiels.title: title,
-        ArticleFiels.creationDate: Timestamp.fromDate(creationDate)
+        ArticleFields.text: text,
+        ArticleFields.title: title,
+        ArticleFields.creationDate: Timestamp.fromDate(creationDate)
       };
 
   Article.fromMap(Map<String, dynamic> map, {DocumentReference reference})
-      : text = map[ArticleFiels.text],
-        title = map[ArticleFiels.title],
-        creationDate = map[ArticleFiels.creationDate].toDate();
+      : text = map[ArticleFields.text],
+        title = map[ArticleFields.title],
+        creationDate = map[ArticleFields.creationDate].toDate();
 }
 
 class ArticleFactory {

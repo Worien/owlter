@@ -1,4 +1,5 @@
 import 'package:flowltter/routes/routes.dart';
+import 'package:flowltter/ui/contact/contact_page.dart';
 import 'package:flowltter/ui/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,9 @@ class RouteGenerator {
       // case routeAbout:
       //   return MaterialPageRoute(builder: (_) => AboutPage());
       //   break;
-      // case routeContacts:
-      //   return MaterialPageRoute(builder: (_) => ContactPage());
-      //   break;
+      case routeContacts:
+        return MaterialPageRoute(builder: (_) => ContactPage());
+        break;
     }
   }
 }

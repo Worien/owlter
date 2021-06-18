@@ -1,9 +1,15 @@
 
+import 'package:flowltter/ui/home/home_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeHeaderWidget extends StatelessWidget {
+
+  HomeBloc homeBloc;
+
   @override
   Widget build(BuildContext context) {
+   homeBloc = BlocProvider.of<HomeBloc>(context);
     return Container(
       height: 400,
       child: Stack(children: [
@@ -11,7 +17,7 @@ class HomeHeaderWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("FWL Studio", style: Theme.of(context).textTheme.subtitle1,),
+            Text("FluttyDev Studio", style: Theme.of(context).textTheme.subtitle1,),
             Padding(
               padding:  EdgeInsets.only(top: 30.0),
               child: Text("We are a small team of enthusiasts \nspecialized on design and develop \nFlutter apps for Android, IOS, and Web", style: Theme.of(context).textTheme.subtitle2,),
@@ -22,7 +28,7 @@ class HomeHeaderWidget extends StatelessWidget {
                 width: 120,
                 height: 40,
                 child: ElevatedButton( child: Text("Hire", style: Theme.of(context).textTheme.button,),
-                  onPressed: (){},
+                  onPressed: _showHireDialog,
                 ),
               ),
             ),
@@ -31,6 +37,10 @@ class HomeHeaderWidget extends StatelessWidget {
 
       ],),
     );
+  }
+
+  _showHireDialog(){
+    print("show hire dialog homeBlock = $homeBloc");
   }
 
 }
